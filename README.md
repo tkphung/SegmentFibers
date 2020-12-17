@@ -15,7 +15,7 @@ The script outputs two image files and a *.mat file all with a random 5 letter n
 * **AAAAA_fiberinfo.met** is a struct variable with the fiber information
 
 Here is an example of a randomly aligned fiber image:
-![Randomly Aligned](/randomalign_example/PYWDF_gauss.tif)
+![Randomly Aligned](/randomalign_example/PYWDF_gauss.png)
 
 Here is an example of a locally aligned fiber image
-![Randomly Aligned](/localalign_example/IGOTA_gauss.tif)
+![Randomly Aligned](/localalign_example/IGOTA_gauss.png)
