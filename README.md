@@ -29,7 +29,7 @@ This script is the function for segmenting fibers. The method for segmentation i
 > and quantification of actin stress fibres undergoing experimentally
 > induced changes.* J. Microsc. (2017).
 
-** We reconstruct the fiber pieces using a pairing algorithm developed by**
+**We reconstruct the fiber pieces using a pairing algorithm developed by**
 
 > Zhang, Z., Xia, S. & Kanchanawong, P. An integrated enhancement and
 > reconstruction strategy for the quantitative extraction of actin stress
