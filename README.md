@@ -1,5 +1,5 @@
 # SegmentFibers
-Stress Fiber segmentation algorithm
+Generate an image with fibers of known width and length distributions for testing fiber segmentation algorithms. Segment fibers based on methods developed by [Rogge+ 2017](https://doi.org/10.1111/jmi.12593) and [Zhang+ 2017](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1684-y).
 
 ## Generate_FiberImage.m
 This script generates a synthetic fiber image composed of random fibers with customizable 
