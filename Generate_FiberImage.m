@@ -7,29 +7,31 @@
 
 %% Image size parameters
 % Set the image size
-x = 1920; % width
-y = 1216; % height
+x = 400; % width
+y = 400; % height
 
 % Image resolution
-pixres = 0.293; % um/pixel (side length of pixel)
+pixres = 1; % um/pixel (side length of pixel)
 
 % Create local regions of alignment?
-localalignment_flag = false;
+localalignment_flag = true;
+% How many centers of local alignment?
+nregions = 20;
 
 %% Fiber parameters
 % Number of fibers
-nfibs = 20000;
+nfibs = 1000;
 
 % Fiber width (aka fiber diameter)
-fdm  = 0.6; % mean (um)
-fdsd = 0.2; % std (um)
+fdm  = 1.5; % mean (um)
+fdsd = 0.5; % std (um)
     % Metrics for log normal distribution
     fdmu = log((fdm^2)/sqrt(fdsd^2 + fdm^2));
     fdsigma = sqrt(log((fdsd^2)/(fdm^2)+1));
     
 % Fiber lenghths
-flm  = 6; % mean (um)
-flsd = 3; % std (um)
+flm  = 20; % mean (um)
+flsd = 5; % std (um)
     % Metrics for log normal distribution
     flmu = log((flm^2)/sqrt(flsd^2 + flm^2));
     flsigma = sqrt(log((flsd^2)/(flm^2)+1));
@@ -38,7 +40,7 @@ flsd = 3; % std (um)
 if localalignment_flag
     % Create interpolation points to define fiber angles
     % Number of points
-    nangs = 100;
+    nangs = nregions*2;
     
     % Coordinates of points
     xangs = rand(nangs,1).*x;
