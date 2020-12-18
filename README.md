@@ -35,4 +35,3 @@ This script is the function for segmenting fibers. The method for segmentation i
 This script takes in an image and runs the segmentation algorithm.
 Here is an example of two segmentation results:
 ![Segmentation example](SegmentationExample.png)
-![Randomly Aligned](/localalign_example/IGOTA_gauss.png)
