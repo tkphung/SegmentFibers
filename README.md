@@ -22,11 +22,15 @@ Here is an example of a locally aligned fiber image
 
 ## segmentfibers.m
 This script is the function for segmenting fibers. The method for segmentation is based on two published papers:
+
 **We implement a fiber tracing method developed by**
+
 > Rogge, H., Artelt, N., Endlich, N. & Endlich, K. Automated segmentation
 > and quantification of actin stress fibres undergoing experimentally
 > induced changes.* J. Microsc. (2017).
+
 ** We reconstruct the fiber pieces using a pairing algorithm developed by**
+
 > Zhang, Z., Xia, S. & Kanchanawong, P. An integrated enhancement and
 > reconstruction strategy for the quantitative extraction of actin stress
 > fibers from fluorescence micrographs. BMC Bioinformatics. (2017).
