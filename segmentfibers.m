@@ -7,6 +7,8 @@ function [fiberpx,fiberd,fiberlab] = segmentfibers(IMG,params,progress_flag)
 %       params- struct containing:
 %             .pixres- pixel resolution (um/pixel)
 %             .fdiam- expected min and max fiber diameter (um)
+%             .basalbody- include mask of basal cell bodies to only search
+%             within cell boundaries for stress fibers
 %       progress_flag- logical of whether to display progress of
 %                      segmentation
 % OUTPUTS:
@@ -26,7 +28,10 @@ function [fiberpx,fiberd,fiberlab] = segmentfibers(IMG,params,progress_flag)
 %
 % Thien-Khoi N. Phung (December 17, 2020)
 
-control_flag = false; % TODO add in control condition flag
+%% STEP 0. Search only the basal cell areas? 
+% TRUE-  search in basal cells only
+% FALSE- search whole field of view
+searchbasal = isfield(params,'basalbody');
 
 %% STEP 1. Parameters
     % Pixel resolution
@@ -162,9 +167,9 @@ control_flag = false; % TODO add in control condition flag
     hthimg = bwareaopen(hthimg,Amin);
 
 % For CONTROL cond, remove any regions that are not within cell boundaries
-    if control_flag
+    if searchbasal
         % Only search for fibers in the Basal Cell bodies
-        hthimg = hthimg & BCBMASK;
+        hthimg = hthimg & params.basalbody;
     end
     
     
